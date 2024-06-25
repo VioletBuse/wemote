@@ -16,5 +16,5 @@ call(Node, Fun, Timeout) ->
         exit:Other -> {error, {other, Other}};
         error:{exception, ErrorReason, StackTrace} -> {error, {runtime_error, ErrorReason, StackTrace}};
         error:{erpc, Reason} -> {error, {rpc_error, Reason}};
-        error: Other -> {error, {other, Other}};
+        error: Other -> {error, {other, Other}}
     end.
